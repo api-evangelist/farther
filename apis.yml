@@ -1,8 +1,20 @@
 aid: farther
 name: Farther
-description: 'Farther is a company surfaced as a portfolio company of bessemer-venture-partners, lightspeed-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: >-
+  Farther is a technology-driven wealth management and registered investment
+  advisory (RIA) firm that pairs human financial advisors with a proprietary
+  "Intelligent Wealth Platform." The firm has recruited more than $23 billion in
+  client assets and positions itself among the fastest-growing US financial
+  services firms (Inc. Magazine, Deloitte Technology Fast 500). Services span
+  financial and retirement planning, investment and portfolio management,
+  tax-intelligent optimization, trust and estate planning, generational wealth,
+  small-business services, Farther Asset Management, and institutional offerings.
+  The client experience runs through a single-page web/mobile application at
+  app.farther.com and integrates account aggregation via Plaid. Farther does not
+  publish a public developer API, OpenAPI/AsyncAPI specification, SDKs, or a
+  developer portal; this profile captures the firm's public web, security, and
+  identity surface. Backed by Bessemer Venture Partners and Lightspeed Venture
+  Partners.
 url: https://raw.githubusercontent.com/api-evangelist/farther/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +23,30 @@ x-backed-by:
 - lightspeed-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/693c19e75cc9d5fcf29d1818/696264bb625f6fd990f752cc_Farther%20OG.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Fintech
+- Wealth Management
+- Financial Services
+- Registered Investment Advisor
+- Financial Planning
+- Investment Management
+- WealthTech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -26,3 +56,32 @@ maintainers:
 common:
 - type: Website
   url: https://www.farther.com/
+- type: Login
+  url: https://app.farther.com/Login
+- type: Support
+  url: https://www.farther.com/faq
+- type: HelpCenter
+  url: https://www.farther.com/faq
+- type: Careers
+  url: https://www.farther.com/careers
+- type: Contact
+  url: https://www.farther.com/contact
+- type: TermsOfService
+  url: https://www.farther.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.farther.com/privacy-policy
+- type: WellKnown
+  url: well-known/farther-well-known.yml
+- type: SecurityTxt
+  url: well-known/farther-security.txt
+- type: Security
+  url: security/farther-vulnerability-disclosure.yml
+- type: VulnerabilityDisclosure
+  url: security/farther-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/farther-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

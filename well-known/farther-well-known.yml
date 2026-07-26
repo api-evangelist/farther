@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of /.well-known/ on farther.com and app.farther.com hosts
+hosts:
+- host: https://app.farther.com
+  documents:
+  - path: /.well-known/security.txt          # RFC 9116
+    status: 200
+    file: farther-security.txt
+  - path: /.well-known/openid-configuration   # OIDC discovery
+    status: 404                               # returns SPA HTML catch-all, not a real OIDC document
+  - path: /.well-known/oauth-authorization-server  # RFC 8414
+    status: 404                               # SPA HTML catch-all
+  - path: /.well-known/api-catalog             # RFC 9727
+    status: 404                               # SPA HTML catch-all
+  - path: /.well-known/ai-plugin.json
+    status: 404                               # SPA HTML catch-all
+  - path: /.well-known/jwks.json
+    status: 404                               # SPA HTML catch-all
+- host: https://www.farther.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+notes: >-
+  app.farther.com is a single-page application whose server returns a 200 HTML
+  shell for every /.well-known/ path except the genuinely published
+  security.txt. Only security.txt is a real discovery document; the other 200
+  responses are the SPA catch-all and are recorded as 404 (no real document).
