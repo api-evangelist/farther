@@ -53,7 +53,7 @@ tags:
 - Company
 - Fintech
 - Wealth Management
-- Financial-Services
+- Financial Services
 - Registered Investment Advisor
 - Financial Planning
 - Investment Management
@@ -67,6 +67,7 @@ tags_raw:
 - Financial Planning
 - Investment Management
 - WealthTech
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
